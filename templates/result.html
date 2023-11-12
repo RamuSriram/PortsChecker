@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port Scanner Results</title>
+</head>
+<body>
+    <h1>Port Scanner Results</h1>
+    <p>Open ports on {{ ip }}:</p>
+    <ul>
+        {% for port, status in open_ports.items() %}
+            <li>{{ port }}: {{ status }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
